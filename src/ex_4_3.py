@@ -23,7 +23,7 @@ def time_between_shutdowns(logfile):
     new_events = [entry.split()[1] for entry in events]
     timeobj = [logstamp_to_datetime(event) for event in new_events]
     time_diff = timeobj[-1] - timeobj[0]
-    return timeobj
+    return time_diff
     
 
 
