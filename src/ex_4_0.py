@@ -13,7 +13,7 @@ def get_shutdown_events(logfile):
     """
     Retrives shutdown events from the specified logfile.
     """
-    with opne(logfile,'r') as f:
+    with open(logfile,'r') as f:
         lines = f.readlines()
     shutdown_events = [line for line in lines if "Shutdown initiated" in line ]
     return shutdown_events
